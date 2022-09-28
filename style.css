@@ -62,6 +62,17 @@ html{
     font-size: 16px;
 
 }
+.fadeUp{
+    transform: translateY(50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+.in-view{
+    transform: none;
+    opacity: 1;
+}
 .socials {
     gap: 1.3rem;
     
@@ -639,6 +650,7 @@ h3{
     line-height: 2rem;
 
 }
+
 .date{
     color: white;
     font-family: 'Space Grotesk', sans-serif;
@@ -752,3 +764,62 @@ input{
     height: 40px;
     margin-top: 1.4rem;
 }
+
+.hamMen{
+    width: 30px;
+    visibility: hidden;
+}
+.marq{
+    flex-direction: row;
+    background-color: red;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+      width: 100vw;
+      overflow: hidden;
+    }
+    .container{
+       width: 100%;
+       /* overflow: hidden; */
+
+    }
+    .hamMen{
+        visibility: visible;
+    }
+    .midNav,.rightNav{
+      display: none;  
+    }
+    .leftNav{
+        gap: 7rem;
+        margin-right: 19rem;
+
+    }
+    .heroSectn{
+        flex-direction: column;
+        font-size: 1rem;
+        height: 100vh;
+    }
+    .heroImg{
+        width: 200px;
+        margin-right: 5rem;
+    }
+    .workSectn{
+        flex-direction: column;
+    }
+    .leftHeroSectn h1{
+        font-size: 2.3rem;
+        margin-right: 9rem;
+        /* background-color: #ff4612; */
+    }
+    .leftHeroSectn  h2{
+        font-size: 2.2rem;
+        margin-right: 2rem;
+    }
+    .leftHeroSectn  h3{
+        font-size: 1rem;
+        margin-right: 10rem;
+    }
+    
+  }
